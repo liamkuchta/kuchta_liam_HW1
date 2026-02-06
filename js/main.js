@@ -34,8 +34,37 @@ function insertMovieData(movie) {
     hideLoading();
 }
 
+function insertMovie(event) {
+    event.preventDefault();
+    showLoading();
+    const filmToFetch = event.currentTarget.dataset.url;
 
+    fetch(filmToFetch)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(insertMovieData)
+        .catch(handleError);
+}
 
+//  loops through the people 
+function showCharacters(data) {
+    // for loop to keep it to 20 
+    for (let i = 0; i < 20; i++) {
+        const character = data[i];
+        
+        //  cloning template 
+        const myClone = myTemplate.content.cloneNode(true);
+        const nameLink = myClone.querySelector("a");
+        
+        nameLink.textContent = character.name;
+        nameLink.dataset.url = character.films[0]; 
+        nameLink.addEventListener("click", insertMovie);
+        characterList.appendChild(myClone);
+    }
+    
+    hideLoading();
+}
 
 // characters appear first
 function insertCharacters() {
