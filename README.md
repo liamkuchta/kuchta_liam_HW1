@@ -43,4 +43,4 @@ this is a repo for liam's ajax redux homework using star wars API
 ## 📝 License
 
 
-MIT License - See LICENSE file for details
+MIT License - See LICENSE file for details .
