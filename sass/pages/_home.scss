@@ -2,6 +2,10 @@ a {
     cursor: pointer;
 }
 
+body {
+    background-color: rgb(0, 0, 0);
+}
+
 ul {
     list-style: none;
     padding:0;
@@ -12,10 +16,62 @@ li {
 }
 
 li:nth-child(odd) {
-    background-color: #efefef;
+    background-color: #000000;
+    border-radius: 10px;
+    border: 1px solid #00e5f9
 }
 
 li img {
     max-width: 10%;
     display: block;
+}
+
+// -------------------
+
+
+#character-section {
+    padding: 20px 0;
+
+    h2 {
+        margin-bottom: 20px;
+        color: #00e5f9;
+    }
+
+    a {
+        color: #00e5f9;
+        
+    }
+}
+
+
+#movie-details {
+    background-color: #1a1a1a;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    min-height: 400px;
+      border: 1px solid #00e5f9;
+      margin-top: 30px;
+    
+
+    .placeholder {
+        color: #999;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(17, 16, 16, 0.2);
+    }
+
+    p {
+        color: #00e5f9;
+    }
+
+    h2 {
+        color: #00e5f9;
+    }
 }
